@@ -1040,6 +1040,6 @@ def doctor_dashboard():
     doctors_data = load_doctor_data()
     return render_template('doctor_dashboard.html', doctors=doctors_data)
 
-
-if __name__ == '__main__':
-    app.run(debug=True, port=8000)
+@app.route("/mbsa")
+def mbsa():
+    return render_template('index.html')
