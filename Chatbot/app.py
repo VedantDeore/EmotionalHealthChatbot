@@ -14,9 +14,6 @@ import google.generativeai as genai
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'  # For session management
 
-# MongoDB URI and connection
-MONGO_URI = "mongodb+srv://vedantdeore11:9322142391%40Abc@mongofirst.fg5b4.mongodb.net/"
-client = MongoClient(MONGO_URI)
 
 
 
@@ -42,7 +39,7 @@ def save_user_credentials(data):
 
 
 # Configure the API key from the environment variable
-genai.configure(api_key= 'AIzaSyABBaeKAY2x-yIugIXeelO5hvN_jwCOUOg' )
+genai.configure(api_key= 'YOUR API KEY' )
 model = genai.GenerativeModel('gemini-1.5-flash')
 
 def run_chat(prompt):
